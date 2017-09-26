@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":
-      "webpack-dev-server --port 3000 --host 0.0.0.0 --progress --colors --inline --hot"
+    "start": "webpack-dev-server --port 3000 --host 0.0.0.0 --progress --colors --inline --hot"
   },
   "repository": {
     "type": "git",
@@ -19,7 +18,8 @@
   },
   "homepage": "https://github.com/larshbj/hjemmeoppgave-frontend#readme",
   "dependencies": {
-    "react": "^15.6.1",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
     "react-router": "^2.0.0"
   },
   "devDependencies": {
