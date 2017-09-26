@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Router, Route, hashHistory } from "react-router";
 import App from "./App.jsx";
+import TableOrganizer from "./TableOrganizer";
 require("./app.scss");
 
 ReactDOM.render(
-  <Router>
-    <Route exact path="/" component={App} />
+  <Router history={hashHistory}>
+    <Route exaxt path="/" component={App}>
+      <Route path="/:tableId" component={TableOrganizer} />
+    </Route>
   </Router>,
   document.getElementById("app")
 );

@@ -1,27 +1,18 @@
 import React from "react";
 import { requestData } from "./requests/requestApi";
-import Table from "./Table";
+import TableOrganizer from "./TableOrganizer";
 
 const App = React.createClass({
-  url:
-    "https://api.github.com/search/repositories?q=language:javascript&sort=stars&order=desc&per_page=100",
-
-  // componentDidMount: function() {
-  //   requestData(this.url, this.gotData);
-  // },
-  //
-  // gotData: function(data) {
-  //   console.log(data.items);
-  //   console.log("success");
-  // },
-
   render: function() {
     return (
       <div className="container">
         <div className="row headerContent">
-          <div className="headerTitle">Hjemmeoppgave-frontend</div>
+          <div className="headerTitle">Populære Javascript-repositories</div>
         </div>
-        <Table url={this.url} />;
+
+        <div className="row page">
+          <TableOrganizer {...this.props} />
+        </div>
       </div>
     );
   }
